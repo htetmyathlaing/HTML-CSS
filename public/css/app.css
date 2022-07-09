@@ -1,0 +1,24 @@
+.container {
+    margin: 5rem;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+    width: 30rem;
+}
+
+
+.item {
+    height: 5rem;
+    flex-grow: 1;
+}
+
+.item:nth-child(odd) {
+    background: red;
+
+}
+
+.item:nth-child(even) {
+    background: green;
+}

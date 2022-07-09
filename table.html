@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table</h1>
+    <table>
+        <colgroup>
+            <col style="background-color: red;">
+            </col>
+            <col style="background-color: blue;">
+            </col>
+            <col style="background-color: green;">
+            </col>
+        </colgroup>
+        <tr>
+            <th colspan="3">Item Title</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Item 1</td>
+            <td>Item 2</td>
+            <td>Item 3</td>
+        </tr>
+        <tr>
+            <td>Item 4</td>
+            <td>Item 5</td>
+        </tr>
+        <tr>
+            <td>Item 6</td>
+            <td>Item 7</td>
+            <td>Item 8</td>
+        </tr>
+    </table>
+</body>
+
+</html>
