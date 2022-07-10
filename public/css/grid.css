@@ -1,0 +1,101 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5rem 5rem 5rem;
+    border: 1px solid;
+    gap: 1rem;
+    /* justify-items: stretch; */
+    /* align-items: center; */
+    /* grid-template-areas:
+        "area1 area2 area2 "
+        "area3 area3 ."
+        "area4 . area5"
+    ; */
+}
+
+.container .item {
+    /* height: 5rem; */
+    /* width: 5rem; */
+}
+
+.item1 {
+    background-color: blueviolet;
+    /* grid-area: area1; */
+    grid-column-start: 2;
+    /* grid-column-end: 5; */
+    grid-column-end: span 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+}
+
+.item2 {
+    background-color: darkorange;
+    /* grid-area: area2; */
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.item3 {
+    background-color: darkorchid;
+    /* grid-area: area3; */
+}
+
+.item4 {
+    background-color: darkgoldenrod;
+    /* grid-area: area4; */
+}
+
+.item5 {
+    background-color: darkolivegreen;
+    /* grid-area: area5; */
+}
+
+.grid-area {
+    margin-top: 2rem;
+    display: grid;
+    border: 1px solid;
+    gap: 1rem;
+    grid-template-rows: 5rem 5rem 5rem;
+    grid-template-areas:
+        "area2 area5 area3 area4 "
+        "area2 area1 area1 area1 "
+        "area2 area1 area1 area1 "
+    ;
+}
+
+@media screen and (max-width: 900px) {
+    .grid-area {
+        grid-template-areas:
+            "area2 area2 area2"
+            "area3 area4 area5"
+            "area1 area1 area1 "
+        ;
+    }
+}
+
+.area-item1 {
+    background-color: blueviolet;
+    grid-area: area1;
+
+}
+
+.area-item2 {
+    background-color: darkorange;
+    grid-area: area2;
+}
+
+.area-item3 {
+    background-color: darkorchid;
+    grid-area: area3;
+}
+
+.area-item4 {
+    background-color: darkgoldenrod;
+    grid-area: area4;
+}
+
+.area-item5 {
+    background-color: darkolivegreen;
+    grid-area: area5;
+}
