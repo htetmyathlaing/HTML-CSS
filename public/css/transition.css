@@ -1,0 +1,42 @@
+div {
+    width: 5rem;
+    height: 5rem;
+    background: red;
+    margin-bottom: 1rem;
+}
+
+/* 
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+transition
+ */
+.transition1 {
+    transition-delay: 0s;
+    transition-duration: 5s;
+    transition-property: width;
+    /* 
+    linear
+    ease
+    ease-in
+    ease-out
+    ease-in-out
+    cubic-bezier(n,n,n,n)
+     */
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0, 0.91, 1, -0.07);
+    transition: width 1s ease-in-out 0s;
+}
+
+.transition1:hover {
+    width: 50rem;
+}
+
+.transition2 {
+    transition: all 3s ease;
+}
+
+.transition2:hover {
+    transform: translate(10rem, 10rem) rotate(45deg);
+}
