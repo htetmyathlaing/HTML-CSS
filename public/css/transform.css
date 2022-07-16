@@ -1,0 +1,65 @@
+div {
+    width: 5rem;
+    height: 5rem;
+    background: red;
+}
+
+/* 
+translateX()
+translateY()
+translate()
+rotate()
+sacle()
+skewX()
+skewY()
+skew()
+matrix(scaleX,skewY, skewX,scaleX, translateX, translateY)
+matrix(1,0,0,1,0,0)
+ */
+
+.translate-x {
+    transform: translateX(10rem);
+}
+
+.translate-y {
+    transform: translateY(-3rem);
+}
+
+.translate {
+    transform: translate(10rem, -3rem);
+}
+
+.rotate {
+    transform: rotate(45deg);
+    transform-origin: 3rem 4rem;
+}
+
+.skew-x {
+    transform: skewX(45deg);
+    transform-origin: 0 0;
+}
+
+.skew-y {
+    transform: skewY(45deg);
+    transform-origin: 0 0;
+}
+
+.skew {
+    transform: skew(17deg, 20deg);
+    transform-origin: 0 0;
+}
+
+.scale-x {
+    transform: scaleX(1.5);
+    transform-origin: 0 0;
+}
+
+.scale-y {
+    transform: scaleY(1.5);
+    transform-origin: 0 0;
+}
+
+.scale {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
