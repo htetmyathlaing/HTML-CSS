@@ -1,0 +1,64 @@
+/* 
+Ready Made Gradient Colors
+https://uigradients.com 
+
+Self-Study 
+Conic Gradients
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+div {
+    min-width: 30rem;
+    min-height: 15rem;
+    margin-bottom: 1rem;
+}
+
+
+.linear.to-right {
+    /* linear-gradient(direction,color1, color2,...) */
+    background-image: linear-gradient(to right, #f00, #0f0, #00f);
+}
+
+.linear.to-bottom {
+    background-image: linear-gradient(to bottom, #f00, #0f0);
+}
+
+.linear.to-bottom-right {
+    background-image: linear-gradient(to bottom right, #f00, #0f0, #00f);
+}
+
+.linear.degree {
+    background-image: linear-gradient(45deg, #f00, #0f0, #00f);
+}
+
+.linear.with-percent {
+    background-image: linear-gradient(to right, #f00 10%, #0f0 60%, #00f 80%);
+}
+
+.linear.repeating {
+    background-image: repeating-linear-gradient(to right, palevioletred 5%, aquamarine 10%);
+}
+
+.radial.circle {
+    /* radial-gradient(shape, color1, color2,..) */
+    background-image: radial-gradient(circle, #f00, #0f0, #00f);
+}
+
+.radial.ellipse {
+    /* radial-gradient(shape, color1, color2,..) */
+    background-image: radial-gradient(ellipse, #f00, #0f0, #00f);
+}
+
+.radial.with-percent {
+    background-image: radial-gradient(ellipse, palevioletred 35%, aquamarine 50%, #00f 80%);
+}
+
+
+.radial.repeating {
+    background-image: repeating-radial-gradient(circle, palevioletred 5%, aquamarine 10%);
+}
