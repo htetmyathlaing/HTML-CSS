@@ -102,17 +102,17 @@
 
 .circle1 {
     background-color: lightgreen;
-    animation: timing1 2s cubic-bezier(1, 0.07, 0.91, 0.25) 0s alternate infinite;
+    animation: timing1 2s cubic-bezier(1, -0.03, 0.58, 1) 0s alternate infinite;
 }
 
 .circle2 {
     background-color: lightcoral;
-    animation: timing2 2s cubic-bezier(1, 0.07, 0.91, 0.25) 0s alternate infinite;
+    animation: timing2 2s cubic-bezier(1, -0.03, 0.58, 1) 0s alternate infinite;
 }
 
 .circle3 {
     background-color: lightseagreen;
-    animation: timing3 2s cubic-bezier(1, 0.07, 0.91, 0.25) 0s alternate infinite;
+    animation: timing3 2s cubic-bezier(1, -0.03, 0.58, 1) 0s alternate infinite;
 }
 
 .circle4 {
