@@ -1,0 +1,238 @@
+.animation1,
+.animation2 {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 2rem;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    /* 
+    normal,
+    reverse,
+    alternate,
+    alternate-reverse,
+     */
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.animation1 {
+    background-color: lightgreen;
+    animation-name: slide1;
+    animation-play-state: paused;
+}
+
+.animation2 {
+    background-color: lightcoral;
+    animation-name: slide2;
+    animation-delay: 2s;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    /* 
+    none
+    forwards
+    backwards
+    both
+     */
+    animation-fill-mode: both;
+
+    /* Shorthand */
+    animation: slide2 2s linear 0s alternate infinite both running;
+}
+
+@keyframes slide1 {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10rem);
+    }
+
+    100% {
+        transform: translateX(20rem);
+    }
+}
+
+@keyframes slide2 {
+
+    0% {
+        transform: translateX(0);
+        background-color: #91f;
+    }
+
+    50% {
+        transform: translateX(10rem);
+        background-color: lightseagreen;
+    }
+
+    100% {
+        transform: translateX(20rem);
+        background-color: limegreen;
+    }
+}
+
+.container {
+    width: 20rem;
+    height: 20rem;
+    background: linear-gradient(135deg, #d0e, #91f);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 10rem;
+    height: 10rem;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.07), 0 10px 15px 0 hsla(0, 0%, 0%, 0.05);
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+
+.circle1 {
+    animation:
+        timing1 4s ease 0 normal infinite, timing-reverse1 4s ease 3 normal infinite;
+}
+
+.circle2 {
+    animation-name: timing2;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+.circle3 {
+    animation-name: timing3;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+.circle4 {
+    animation-name: timing4;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 3s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes timing1 {
+    0% {
+        background-color: none;
+    }
+
+    25% {
+        background-color: lightgreen;
+    }
+
+    100% {
+        background-color: lightgreen;
+    }
+}
+
+@keyframes timing-reverse1 {
+    0% {
+        background-color: lightgreen;
+    }
+
+    75% {
+        background-color: none;
+    }
+
+    100% {
+        background-color: none;
+    }
+}
+
+
+@keyframes timing2 {
+    0% {
+        background-color: none;
+    }
+
+    50% {
+        background-color: lightcoral;
+    }
+
+    100% {
+        background-color: lightcoral;
+    }
+}
+
+@keyframes timing-reverse2 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes timing3 {
+    0% {
+        background-color: none;
+    }
+
+    75% {
+        background-color: lightseagreen;
+    }
+
+    100% {
+        background-color: lightseagreen;
+    }
+}
+
+@keyframes timing-reverse3 {
+    0% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes timing4 {
+    0% {
+        background-color: none;
+    }
+
+    100% {
+        background-color: purple;
+    }
+}
+
+@keyframes timing-reverse4 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
