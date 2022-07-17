@@ -101,138 +101,94 @@
 
 
 .circle1 {
-    animation:
-        timing1 4s ease 0 normal infinite, timing-reverse1 4s ease 3 normal infinite;
+    background-color: lightgreen;
+    animation: timing1 2s cubic-bezier(1, 0.07, 0.91, 0.25) 0s alternate infinite;
 }
 
 .circle2 {
-    animation-name: timing2;
-    animation-duration: 4s;
-    animation-timing-function: ease;
-    animation-delay: 1s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
+    background-color: lightcoral;
+    animation: timing2 2s cubic-bezier(1, 0.07, 0.91, 0.25) 0s alternate infinite;
 }
 
 .circle3 {
-    animation-name: timing3;
-    animation-duration: 4s;
-    animation-timing-function: ease;
-    animation-delay: 2s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
+    background-color: lightseagreen;
+    animation: timing3 2s cubic-bezier(1, 0.07, 0.91, 0.25) 0s alternate infinite;
 }
 
 .circle4 {
-    animation-name: timing4;
-    animation-duration: 4s;
-    animation-timing-function: ease;
-    animation-delay: 3s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
+    background-color: goldenrod;
+    animation: timing4 2s cubic-bezier(1, -0.03, 0.58, 1) 0s alternate infinite;
 }
 
 @keyframes timing1 {
     0% {
-        background-color: none;
+        transform: scale(0);
+        opacity: 0;
     }
 
     25% {
-        background-color: lightgreen;
-    }
-
-    100% {
-        background-color: lightgreen;
-    }
-}
-
-@keyframes timing-reverse1 {
-    0% {
-        background-color: lightgreen;
-    }
-
-    75% {
-        background-color: none;
-    }
-
-    100% {
-        background-color: none;
-    }
-}
-
-
-@keyframes timing2 {
-    0% {
-        background-color: none;
-    }
-
-    50% {
-        background-color: lightcoral;
-    }
-
-    100% {
-        background-color: lightcoral;
-    }
-}
-
-@keyframes timing-reverse2 {
-    0% {
+        transform: scale(1);
         opacity: 1;
     }
 
-    50% {
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes timing2 {
+    0% {
+        transform: scale(0);
         opacity: 0;
     }
 
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
     100% {
-        opacity: 0;
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
 @keyframes timing3 {
     0% {
-        background-color: none;
+        transform: scale(0);
+        opacity: 0;
     }
 
     75% {
-        background-color: lightseagreen;
-    }
-
-    100% {
-        background-color: lightseagreen;
-    }
-}
-
-@keyframes timing-reverse3 {
-    0% {
+        transform: scale(1);
         opacity: 1;
     }
 
-    75% {
-        opacity: 0;
-    }
-
     100% {
-        opacity: 0;
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
 @keyframes timing4 {
     0% {
-        background-color: none;
-    }
-
-    100% {
-        background-color: purple;
-    }
-}
-
-@keyframes timing-reverse4 {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
+        transform: scale(0);
         opacity: 0;
+    }
+
+    25% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
