@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap components</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        :root {
+            --text-color: yellow;
+            --blue: blue;
+        }
+
+        .custom-tooltip {
+            --bs-tooltip-color: var(--text-color);
+            --bs-tooltip-bg: var(--blue);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>Popover</h1>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+            data-bs-placement="top" data-bs-content="Top popover">
+            Popover on top
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+            data-bs-placement="bottom" data-bs-content="Bottom popover">
+            Popover on top
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+            data-bs-placement="left" data-bs-content="Left popover">
+            Popover on top
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+            data-bs-placement="right" data-bs-content="Right popover">
+            Popover on top
+        </button>
+    </div>
+
+    <div class="container mt-4">
+        <h1>Tooltips</h1>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Top Tooltips">
+            Tooltip
+        </button>
+        <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltips on span">Tooltip</span>
+
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+            Custom tooltip
+        </button>
+    </div>
+    <div class="container mt-4">
+        <h1>Toast</h1>
+        <button type="button" class="btn btn-primary" id="toast-btn">Show live toast</button>
+
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="toast-content" class="toast" role="alert">
+                <div class="toast-header">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h1>Card</h1>
+        <div class="card" style="width: 30rem;">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+    <div class="my-4 py-4"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script>
+        /**
+         * Popover
+         */
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+        /**
+         * Tooltip
+         */
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        /**
+         * Toast
+         */
+        const toastBtn = document.getElementById('toast-btn')
+        const toastItem = document.getElementById('toast-content')
+        if (toastBtn) {
+            toastBtn.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastItem)
+                toast.show()
+            })
+        }
+    </script>
+
+</body>
+
+</html>
