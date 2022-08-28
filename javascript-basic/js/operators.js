@@ -99,7 +99,7 @@ console.log('firstName + lastName = ',fullName)
 // 2. Equal To value and type ( === )
 console.log("2 == 2 => ", 2 == 2);
  /** 
-  * Here number 2 becomes string 2
+  * Here string 2 becomes number 2
   * Type Coercion
   */
 console.log("2 == '2' => ", 2 == '2'); // true
