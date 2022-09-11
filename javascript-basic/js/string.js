@@ -71,4 +71,26 @@ console.log(replacedString.replaceAll('orange' , 'apple'))
 console.log(replacedString.replace(/orange/g , 'apple'))
 
 
+// search() => return index number if found, return -1 if not
+let stringToSearch = "Hello World, I'm a JavaScript learner."
+console.log(stringToSearch.search('JavaScript'))
+console.log(stringToSearch.search('javascript'))
+console.log(stringToSearch.search(/javascript/i))
+
+// indexOf() ,lastIndexOf()  => return index number if found, return -1 if not
+console.log(stringToSearch.indexOf('JavaScript'))
+console.log(stringToSearch.indexOf(/javascript/i)) // not working, no error
+
+console.log(stringToSearch.indexOf('r'))
+console.log(stringToSearch.lastIndexOf('r'))
+
+// includes() => return true|false
+console.log(stringToSearch.includes('JavaScript'))
+console.log(stringToSearch.includes('JavaScript', 20))
+
+// startsWith(), endsWith() => return true|false
+console.log(stringToSearch.startsWith('H'))
+console.log(stringToSearch.startsWith('H', 1))
+console.log(stringToSearch.endsWith('H'))
+
 
