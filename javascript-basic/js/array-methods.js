@@ -51,3 +51,71 @@ console.log(flowers.toString())
 console.log(flowers.join())
 console.log(arrayConvertedFromString.join(' '))
 
+/**
+ * Merging Array
+ */
+let firstArr = [2,3,4];
+let secondArr = [5,6,7];
+
+// using spread operator
+let mergedArray = [...firstArr, ...secondArr];
+console.log(mergedArray)
+
+// using concat function
+let mergedArray2 = firstArr.concat(secondArr)
+console.log(mergedArray2)
+
+/**
+ * Iterating Array
+ */
+
+/**
+ * searching
+ */
+console.log(flowers.find((f) => f === 'rose'));
+console.log(flowers.find((f) => f.includes('se')));
+console.log(flowers.findIndex((f) => f.includes('se')));
+
+/**
+ * filter()  => return array
+ */
+console.log(flowers.filter((f) => f.includes('e')));
+
+/**
+ * map() => return array
+ */
+let numbers = [3,5,4,1,2];
+let makeTriple = (number) => number * 3
+let newNumbers1 = numbers.map((n)=> n * 2)
+let newNumbers2 = numbers.map(makeTriple)
+console.log(newNumbers1, newNumbers2)
+
+/**
+ * some(), every() => return boolean
+ */
+console.log(numbers.some((n)=> n > 4))
+console.log(numbers.every((n)=> n >= 1))
+
+/**
+ * minimum, maximum
+ */
+ console.log(Math.min.apply(null, numbers))
+ console.log(Math.max.apply(null, numbers))
+
+ // using lodash lib
+ console.log(_.min(numbers))
+ console.log(_.max(numbers))
+
+ /**
+  * sorting array
+  */
+ let sortNumberAsc = (a, b) =>  a - b 
+ let sortNumberDesc = (a, b) =>  b - a
+ console.log(numbers.sort(sortNumberAsc))
+ console.log(numbers.sort(sortNumberDesc))
+
+ let sortStingAsc = (a, b) =>  a.localeCompare(b) 
+ let sortStingDesc = (a, b) =>  b.localeCompare(a) 
+ console.log(flowers.sort(sortStingAsc))
+ console.log(flowers.sort(sortStingDesc))
+ 

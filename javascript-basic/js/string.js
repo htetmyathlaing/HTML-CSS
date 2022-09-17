@@ -24,6 +24,7 @@ console.log(text.length)
 // string extraction
 console.log(text[0])
 console.log(text.charAt(4))
+console.log(text.charCodeAt(4))
 
 console.log(text.slice(4,9))
 console.log(text.slice(9,4)) // return empty string
