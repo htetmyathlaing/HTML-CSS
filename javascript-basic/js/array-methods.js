@@ -118,4 +118,10 @@ console.log(numbers.every((n)=> n >= 1))
  let sortStingDesc = (a, b) =>  b.localeCompare(a) 
  console.log(flowers.sort(sortStingAsc))
  console.log(flowers.sort(sortStingDesc))
+
+ // reverse
+console.log(flowers.reverse())
+
+
+
  
