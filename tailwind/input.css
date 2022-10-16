@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply bg-slate-100 rounded-xl p-8 w-1/4 h-auto hover:shadow-lg hover:bg-my-custom-color hover:translate-x-12 duration-1000 hover:text-white;
+}
